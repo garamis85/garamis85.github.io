@@ -1,609 +1,870 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<!-- 
-		Base: #27878B
-		Accent 1 (red): #E6433F
-		Accent 2 (orange): #E6AF3F
-		Dark Gray: #374243
-		Light Gray: #A9B1B3
-	-->
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Kevin Cupak</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
-  body {
-	  font: 400 15px Lato, sans-serif;
-	  line-height: 1.8;
-	  color: #818181;
-  }
-  h2 {
-	  font-size: 24px;
-	  text-transform: uppercase;
-	  color: #303030;
-	  font-weight: 600;
-	  margin-bottom: 30px;
-  }
-  h4 {
-	  font-size: 19px;
-	  line-height: 1.375em;
-	  color: #303030;
-	  font-weight: 400;
-	  margin-bottom: 30px;
-  }  
-  .jumbotron {
-	  background-color: #27868B;
-	  color: #fff;
-	  padding: 100px 25px;
-	  font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-	  padding: 60px 50px;
-  }
-  .bg-grey {
-	  background-color: #A9B1B3;
-  }
-  .accent-color {
-	  color: #E6433F !important;
-  }
-  #navAccent {
-	  background-color: #fff;
-	  color: #E6433F !important;
-  }
-  .btn-default.btn-accent {
-	  color: #FFF;
-	  background-color: #E6433F;
-	  border-color: #374243;
-  }
-  .logo-small {
-	  color: #27868B;
-	  font-size: 50px;
-  }
-  .logo {
-	  color: #27868B;
-	  font-size: 200px;
-  }
-  .thumbnail {
-	  padding: 0 0 15px 0;
-	  border: none;
-	  border-radius: 0;
-  }
-  .thumbnail img {
-	  width: 100%;
-	  height: 100%;
-	  margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-	  background-image: none;
-	  color: #27868B;
-  }
-  .carousel-indicators li {
-	  border-color: #27868B;
-  }
-  .carousel-indicators li.active {
-	  background-color: #27868B;
-  }
-  .item h4 {
-	  font-size: 19px;
-	  line-height: 1.375em;
-	  font-weight: 400;
-	  font-style: italic;
-	  margin: 70px 0;
-  }
-  .item span {
-	  font-style: normal;
-  }
-  .panel {
-	  border: 1px solid #27868B; 
-	  border-radius:0 !important;
-	  transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-	  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-	  border: 1px solid #27868B;
-	  background-color: #fff !important;
-	  color: #27868B;
-  }
-  .panel-heading {
-	  color: #fff !important;
-	  background-color: #27868B !important;
-	  padding: 25px;
-	  border-bottom: 1px solid transparent;
-	  border-top-left-radius: 0px;
-	  border-top-right-radius: 0px;
-	  border-bottom-left-radius: 0px;
-	  border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-	  background-color: white !important;
-  }
-  .panel-footer h3 {
-	  font-size: 32px;
-  }
-  .panel-footer h4 {
-	  color: #aaa;
-	  font-size: 14px;
-  }
-  .panel-footer .btn {
-	  margin: 15px 0;
-	  background-color: #27868B;
-	  color: #fff;
-  }
-  .navbar {
-	  margin-bottom: 0;
-	  background-color: #27868B;
-	  z-index: 9999;
-	  border: 0;
-	  font-size: 12px !important;
-	  line-height: 1.42857143 !important;
-	  letter-spacing: 4px;
-	  border-radius: 0;
-	  font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-	  color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-	  color: #27868B !important;
-	  background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-	  border-color: transparent;
-	  color: #fff !important;
-  }
-  footer .glyphicon {
-	  font-size: 20px;
-	  margin-bottom: 20px;
-	  color: #27868B;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-	  animation-name: slide;
-	  -webkit-animation-name: slide;	
-	  animation-duration: 1s;	
-	  -webkit-animation-duration: 1s;
-	  visibility: visible;			
-  }
-  @keyframes slide {
-	0% {
-	  opacity: 0;
-	  -webkit-transform: translateY(70%);
-	} 
-	100% {
-	  opacity: 1;
-	  -webkit-transform: translateY(0%);
-	}	
-  }
-  @-webkit-keyframes slide {
-	0% {
-	  opacity: 0;
-	  -webkit-transform: translateY(70%);
-	} 
-	100% {
-	  opacity: 1;
-	  -webkit-transform: translateY(0%);
-	}
-  }
-  @media screen and (max-width: 768px) {
-	.col-sm-4 {
-	  text-align: center;
-	  margin: 25px 0;
-	}
-	.btn-lg {
-		width: 100%;
-		margin-bottom: 35px;
-	}
-  }
-  @media screen and (max-width: 480px) {
-	.logo {
-		font-size: 150px;
-	}
-  }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="IAMX, One Page Responsive HTML Resume Template">
+  <meta name="keywords" content="onepage, resume, CV HTML template, personal Vcard, html resume, free resume template, free HTML template, free bootstrap template, personal portfolio, free html portfolio">
+	<meta name="author" content="http://trendytheme.net/">
+
+	<title>IAMX – Responsive Personal Portfolio vCard Template</title>
+
+  <!-- Web Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<!-- Animate css -->
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <!-- Magnific css -->
+	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+  <!-- Responsive CSS -->
+  <link href="assets/css/responsive.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="assets/images/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/images/ico/apple-touch-icon-57-precomposed.png">
+
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>                        
-	  </button>
-	  <a class="navbar-brand" id="navAccent" href="#myPage">Home</a>
-	</div>
-	<div class="collapse navbar-collapse" id="myNavbar">
-	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="#about">ABOUT</a></li>
-		<!-- <li><a href="#services">SERVICES</a></li> -->
-		<!-- <li><a href="#portfolio">PORTFOLIO</a></li> -->
-		<!-- <li><a href="#pricing">PRICING</a></li> -->
-		<!-- <li><a href="https://www.kevincupak.com/blog" target="_self"><i class="fa fa-external-link"> BLOG</i></a></li> -->
-		<li><a href="#blog">BLOG</a></li>
-		<li><a href="#contact">CONTACT</a></li>
-	  </ul>
-	</div>
-  </div>
-</nav>
-
-<div class="jumbotron text-center">
-  <h1>Kevin Cupak</h1> 
-  <p>I specialize in Computer Engineering and Medical Software</p> 
-</div>
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-	<div class="col-sm-8">
-	  <h2>About Me</h2><br>
-	  <h4>I am a computer software professional currently working in the Boston area. I have a Bachelors of Science degree in Computer Engineering Technology from the Rochester Institute of Technology.</h4><br>
-	  <p>I plan to keep this website as up to date as time permits with information regarding my professional and (occasionally) personal interests. If you have any specific questions, feel free to send me an email using the form at the bottom of the page.</p><br>
-	  <p>Thanks for stopping by!</p>
-	  <!-- <br><button class="btn btn-default btn-lg">Get in Touch</button> -->
-	</div>
-	<div class="col-sm-4">
-	  <span class="fa fa-laptop logo accent-color slideanim"></span>
-	</div>
-  </div>
-</div>
-
-<!-- <div class="container-fluid bg-grey">
-  <div class="row">
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-globe logo slideanim"></span>
-	</div>
-	<div class="col-sm-8">
-	  <h2>Our Values</h2><br>
-	  <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-	  <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-  </div>
-</div> -->
-
-<!-- Container (Services Section) -->
-<!-- <div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
-  <h4>What we offer</h4>
-  <br>
-  <div class="row slideanim">
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-off logo-small"></span>
-	  <h4>POWER</h4>
-	  <p>Lorem ipsum dolor sit amet..</p>
-	</div>
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-heart logo-small"></span>
-	  <h4>LOVE</h4>
-	  <p>Lorem ipsum dolor sit amet..</p>
-	</div>
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-lock logo-small"></span>
-	  <h4>JOB DONE</h4>
-	  <p>Lorem ipsum dolor sit amet..</p>
-	</div>
-  </div>
-  <br><br>
-  <div class="row slideanim">
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-leaf logo-small"></span>
-	  <h4>GREEN</h4>
-	  <p>Lorem ipsum dolor sit amet..</p>
-	</div>
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-certificate logo-small"></span>
-	  <h4>CERTIFIED</h4>
-	  <p>Lorem ipsum dolor sit amet..</p>
-	</div>
-	<div class="col-sm-4">
-	  <span class="glyphicon glyphicon-wrench logo-small"></span>
-	  <h4 style="color:#303030;">HARD WORK</h4>
-	  <p>Lorem ipsum dolor sit amet..</p>
-	</div>
-  </div>
-</div> -->
-
-<!-- Container (Blog Section) -->
-<div id="blog" class="container-fluid text-center bg-grey">
-  <h2>Blog</h2>
-  <p>I'll be posting semi-regularly until I both get in the habit and have more time to keep up with it.</p><br>
-  <!-- <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-	<div class="col-sm-4">
-	  <div class="thumbnail">
-		<img src="paris.jpg" alt="Paris" width="400" height="300">
-		<p><strong>Paris</strong></p>
-		<p>Yes, we built Paris</p>
-	  </div>
-	</div>
-	<div class="col-sm-4">
-	  <div class="thumbnail">
-		<img src="newyork.jpg" alt="New York" width="400" height="300">
-		<p><strong>New York</strong></p>
-		<p>We built New York</p>
-	  </div>
-	</div>
-	<div class="col-sm-4">
-	  <div class="thumbnail">
-		<img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-		<p><strong>San Francisco</strong></p>
-		<p>Yes, San Fran is ours</p>
-	  </div>
-	</div>
-  </div><br> -->
-  
-  <h4>Some of my latest posts</h4>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-	  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	  <li data-target="#myCarousel" data-slide-to="1"></li>
-	  <li data-target="#myCarousel" data-slide-to="2"></li>
-	</ol>
-
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner" role="listbox">
-	  <!-- <div class="item">
-		<h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
-	  </div>
-	  <div class="item">
-		<h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
-	  </div> -->
-	  <div class="item active">
-		<a href="https://www.kevincupak.com/blog/2016/03/01/journal-day-2/" target="_self"><h3>Journal Day 2</h3></a>
-		<h4>
-			Day 2: Continuing to work within that idea of constraints, try to write a 6-word memoir of your life so far.<br>
-			This idea is rumored to have originated from Papa Hemingway. The benefit is that with only ...<br>
-			<span style="font-style:normal;">March 1, 2016</span>
-		</h4>
-	  </div>
-	  <div class="item">
-		<a href="https://www.kevincupak.com/blog/2016/04/13/journal-day-3-a-k-a-im-terrible-at-this/" target="_self"><h3>Journal: Day 3 (a.k.a. I’m terrible at this)</h3></a>
-		<h4>
-			Long time. No excuses. I’ve been busy with life and baby. So I’m going to jump back into this experiment.<br>
-			<br>
-			Day 3: Decide on one positive habit you’d like to implement in your ...<br>
-			<span style="font-style:normal;">March 1, 2016</span>
-		</h4>
-	  </div>
-	  <div class="item">
-		<a href="https://www.kevincupak.com/blog/2016/04/14/tis-100/" target="_self"><h3>TIS-100</h3></a>
-		<h4>
-			I felt like writing a quick post because this game has been driving me insane. I finally started playing <br>
-			it the other day after beating Hacknet, which itself is a fantastic game. But I have to say that <br>
-			TIS-100 is devilishly <br>
-			<span style="font-style:normal;">March 1, 2016</span>
-		</h4>
-	  </div>
+<body>
+	<!-- Preloader -->
+	<div id="tt-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
 	</div>
 
-	<!-- Left and right controls -->
-	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-	  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	  <span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-	  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	  <span class="sr-only">Next</span>
-	</a>
-  </div><br>
-  
-  <br><a href="https://garamis85.github.io/blog/" target="_self"><button class="btn btn-default btn-lg btn-accent slideanim">Check it out</button></a>
-</div>
+	<!-- Home Section -->
+	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+		<div class="intro">
+			<div class="intro-sub">I am X</div>
+			<h1>Creative <span>Designer</span></h1>
+			<p>I am a fully professional freelance creative User Interface Designer &amp; Developer<br> Involving with latest web designing and technologies is a great <br> feel free to contact creative.</p>
 
-<!-- Container (Pricing Section) -->
-<!-- <div id="pricing" class="container-fluid">
-  <div class="text-center">
-	<h2>Pricing</h2>
-	<h4>Choose a payment plan that works for you</h4>
-  </div>
-  <div class="row slideanim">
-	<div class="col-sm-4 col-xs-12">
-	  <div class="panel panel-default text-center">
-		<div class="panel-heading">
-		  <h1>Basic</h1>
+      <div class="social-icons">
+        <ul class="list-inline">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+      </div> <!-- /.social-icons -->
 		</div>
-		<div class="panel-body">
-		  <p><strong>20</strong> Lorem</p>
-		  <p><strong>15</strong> Ipsum</p>
-		  <p><strong>5</strong> Dolor</p>
-		  <p><strong>2</strong> Sit</p>
-		  <p><strong>Endless</strong> Amet</p>
-		</div>
-		<div class="panel-footer">
-		  <h3>$19</h3>
-		  <h4>per month</h4>
-		  <button class="btn btn-lg">Sign Up</button>
-		</div>
-	  </div>      
-	</div>     
-	<div class="col-sm-4 col-xs-12">
-	  <div class="panel panel-default text-center">
-		<div class="panel-heading">
-		  <h1>Pro</h1>
-		</div>
-		<div class="panel-body">
-		  <p><strong>50</strong> Lorem</p>
-		  <p><strong>25</strong> Ipsum</p>
-		  <p><strong>10</strong> Dolor</p>
-		  <p><strong>5</strong> Sit</p>
-		  <p><strong>Endless</strong> Amet</p>
-		</div>
-		<div class="panel-footer">
-		  <h3>$29</h3>
-		  <h4>per month</h4>
-		  <button class="btn btn-lg">Sign Up</button>
-		</div>
-	  </div>      
-	</div>       
-	<div class="col-sm-4 col-xs-12">
-	  <div class="panel panel-default text-center">
-		<div class="panel-heading">
-		  <h1>Premium</h1>
-		</div>
-		<div class="panel-body">
-		  <p><strong>100</strong> Lorem</p>
-		  <p><strong>50</strong> Ipsum</p>
-		  <p><strong>25</strong> Dolor</p>
-		  <p><strong>10</strong> Sit</p>
-		  <p><strong>Endless</strong> Amet</p>
-		</div>
-		<div class="panel-footer">
-		  <h3>$49</h3>
-		  <h4>per month</h4>
-		  <button class="btn btn-lg">Sign Up</button>
-		</div>
-	  </div>      
-	</div>    
-  </div>
-</div> -->
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid">
-	<h2 class="text-center">CONTACT</h2>
-	<div class="row">
-		<div class="col-sm-5">
-			<p>Contact me and I'll try to get back to you within 48 hours.</p>
-			<p><span class="glyphicon glyphicon-map-marker"></span> Boston, US</p>
-			<p><span class="glyphicon glyphicon-envelope"></span> contact-me@kevincupak.com</p>	   
-			<p><span class="fa fa-linkedin-square"> </span> <a href="https://www.linkedin.com/in/cupakk" target="_blank" >LinkedIn</a></p>
+		<div class="mouse-icon">
+			<div class="wheel"></div>
 		</div>
-		<div class="col-sm-7 slideanim">
-			<!-- <div class="row">
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+	</section><!-- End Home Section -->
+
+
+
+
+	<!-- Navigation -->
+	<header class="header">
+		<nav class="navbar navbar-custom" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
 				</div>
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#works">Works</a></li>
+						<li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+					</ul>
 				</div>
-			</div>
-			<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-			<div class="row">
-				<div class="col-sm-12 form-group">
-					<button class="btn btn-default pull-right" type="submit">Send</button>
-				</div>
-			</div> -->
-			<form method="post" action="https://formspree.io/contact-me@kevincupak.com">
-				<input type="text" name="_gotcha" style="display: none" />
-				<input type="hidden" name="_next" value="thanks.html" />
-				<div class="row">
-					<div class="col-sm-6 form-group">
-						<!-- <input type="text" name="name" placeholder="Name" required/> -->
-						<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-					</div>
-					<div class="col-sm-6 form-group">
-						<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-					</div>
-				</div>
-				<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-				<div class="row">
-					<div class="col-sm-12 form-group">
-						<button class="btn btn-default btn-accent pull-right" type="submit">Send</button>
-					</div>
-				</div>
-				<!-- <div class="row">
-					<div class="6u 12u$(mobile)">
-						<input type="text" name="name" placeholder="Name" required/>
-					</div>
-					<div class="6u$ 12u$(mobile)">
-						<input type="text" name="email" placeholder="Email" required/>
-					</div>
-					<input type="text" name="_gotcha" style="display: none" />
-					<input type="hidden" name="_next" value="thanks.html" />
-					<div class="12u$">
-						<textarea name="message" placeholder="Message" required></textarea>
-					</div>
-					<div class="12u$">
-						<input type="submit" value="Send Message" />
-						<button class="btn btn-default pull-right" type="submit">Send</button>
-					</div>
-				</div> -->
-			</form>
-		</div>
+			</div><!-- .container -->
+		</nav>
+	</header><!-- End Navigation -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">About Me</h2>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-push-8">
+            <div class="biography">
+              <div class="myphoto">
+                <img src="assets/images/myphoto.jpg" alt="">
+              </div>
+              <ul>
+                <li><strong>Name:</strong> John Doe</li>
+                <li><strong>Date of birth:</strong> 05 Dec 1993</li>
+                <li><strong>Address:</strong> 239/2 Awesome Street, USA</li>
+                <li><strong>Nationality:</strong> American</li>
+                <li><strong>Phone:</strong> (000) 1234 56789</li>
+                <li><strong>Email:</strong> yourmail@iamx.com</li>
+              </ul>
+            </div>
+          </div> <!-- col-md-4 -->
+
+          <div class="col-md-8 col-md-pull-4">
+            <div class="short-info wow fadeInUp">
+              <h3>Objective</h3>
+              <p>An opportunity to work and upgrade oneself, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community. I'm presently expanding my solid experience in UI / UX design. I focus on using my interpersonal skills to build good user experience and create a strong interest in my employers. I hope to develop skills in motion design and my knowledge of the Web, and become an honest asset to the business. As an individual, I'm self-confident you’ll find me creative, funny and naturally passionate. I’m a forward thinker, which others may find inspiring when working as a team.</p>
+            </div>
+
+            <div class="short-info wow fadeInUp">
+              <h3>What I Do ?</h3>
+              <p>I have been working as a web interface designer since. I have a love of clean, elegant styling, and I have lots of experience in the production of CSS3 and HTML5 for modern websites. I loving creating awesome as per my clients’ need. I think user experience when I try to craft something for my clients. Making a design awesome.</p>
+
+              <ul class="list-check">
+                <li>User Experience Design</li>
+                <li>Interface Design</li>
+                <li>Product Design</li>
+                <li>Branding Design</li>
+                <li>Digital Painting</li>
+                <li>Video Editing</li>
+              </ul>
+            </div>
+
+            <div class="my-signature">
+              <img src="assets/images/sign.png" alt="">
+            </div>
+
+            <div class="download-button">
+              <a class="btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>Send me message</a>
+              <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i>download my cv</a>
+            </div>
+          </div>
+
+
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </section><!-- End About Section -->
+
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+      <div class="tf-bg-overlay">
+
+        <div class="container">
+
+          <div class="video-intro">
+             <a class="popup-video" href="https://www.youtube.com/watch?v=LGOjcu0HRec"> <i class="fa fa-play"></i>  </a>
+             <h2>Video Introducing</h2>
+          </div>
+
+        </div>
+
+        <!--/.container-->
+      </div>
+      <!--/.overlay-->
+    </section>
+    <!-- /.Video Section -->
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section section-padding">
+        <div class="container">
+            <h2 class="section-title wow fadeInUp">Resume</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">2007-2011</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Bachelor degree certificate</h3>
+                                            <span>BA(Hons) in UI Engineering, Arts University, Pabna, USA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">2004-2006</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Higher Secondary certificate</h3>
+                                            <span>Typography Arts, FA College, New York, USA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>From this college of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">2000-2003</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Secondary school certificate</h3>
+                                            <span>Creative Arts, Julius Jr. school, USA</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I was awesome at arts, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                  <span class="month">2011-2013</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Junior ui designer</h3>
+                                            <span>XYZ Design Home, One Street, Boston</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">2013-2015</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Lead UX Consultant</h3>
+                                            <span>Lucky8 Designing Firm, California</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>Completely provide access to seamless manufactured products before functionalized synergy. Progressively redefine competitive.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div><!-- /.container -->
+    </section><!-- End Resume Section -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Skills</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h3>UX Design</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Visual Design</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Business Design</h3></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Branding Design</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Motion Graphic</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Flyers Designing</h3></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+          </div><!-- /.col-md-6 -->
+        </div><!-- /.row -->
+
+        <div class="skill-chart text-center">
+          <h3>More skills</h3>
+        </div>
+          
+        <div class="row more-skill text-center">
+          <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="91" data-color="e74c3c">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>leadership</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="23" data-color="2ecc71">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Creativity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Branding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Marketing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Motivation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div><!-- /.container -->
+    </section><!-- End Skills Section -->
+
+
+    <!-- Works Section -->
+    <section id="works" class="works-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Works</h2>
+
+        <ul class="list-inline" id="filter">
+            <li><a class="active" data-group="all">All</a></li>
+            <li><a data-group="design">Design</a></li>
+            <li><a data-group="web">Web</a></li>
+            <li><a data-group="interface">Interface</a></li>
+            <li><a data-group="identety">Identity</a></li>
+        </ul>
+
+        <div class="row">
+          <div id="grid">
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "interface"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-1.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-1.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+
+
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-2.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-2.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "interface"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-3.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-3.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-4.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-4.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-5.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-5.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-6.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-6.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-7.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-7.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-8.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-8.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /#grid -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- End Works Section -->
+
+
+    <!-- Facts Section -->
+    <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="tt-overlay-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="count-wrap">
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-flask"></i>
+                  <h3 class="timer">7</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div class="col-sm-3 col-xs-6"> 
+                  <i class="fa fa-thumbs-up"></i>
+                  <h3 class="timer">651</h3>                
+                  <p>Projects Done</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-users"></i>
+                  <h3 class="timer">251</h3> 
+                  <p>Happy Clients</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-trophy"></i>
+                  <h3 class="timer">5</h3> 
+                  <p>Awards Won</p>
+                </div>
+              </div><!-- /count-wrap -->
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div>
+    </section> <!-- End Facts Section -->
+
+
+    <!-- Blog Section -->
+    <section id="blog" class="latest-blog-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Latest Post</h2>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <article class="blog-post-wrapper">
+              <div class="figure">    
+                <div class="post-thumbnail">
+                  <a href="#"><img src="assets/images/blog/01.jpg" class="img-responsive " alt=""></a>
+                </div>
+                  <i class="fa fa-file-photo-o"></i>
+              </div><!-- /.figure -->
+              <header class="entry-header">
+                <div class="post-meta">
+                  <span class="the-category"> 
+                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                  </span>
+                </div>
+                <h2 class="entry-title"><a href="#" rel="">Common fonts used for newspaper template design</a></h2>
+                <hr>
+                <div class="entry-meta">
+                  <ul class="list-inline">
+                    <li>
+                      <span class="the-author">
+                        <a href="#">Admin</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-time">
+                        <a href="#">06 Jan 2015</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-share">
+                        <a href="#" title="share">30</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-comments">
+                        <a href="#" title="">05</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .entry-meta -->
+              </header><!-- .entry-header -->
+            </article>
+          </div><!-- /.col-sm-4 -->
+          <div class="col-sm-4">
+            <article class="blog-post-wrapper">
+              <div class="figure">    
+                <div class="post-thumbnail">
+                  <a href="#"><img src="assets/images/blog/02.jpg" class="img-responsive " alt=""></a>
+                </div>
+                  <i class="fa fa-file-video-o"></i>
+              </div><!-- /.figure -->
+              <header class="entry-header">
+                <div class="post-meta">
+                  <span class="the-category"> 
+                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                  </span>
+                </div>
+                <h2 class="entry-title"><a href="#" rel="">What is the style of font called that is typically</a></h2>
+                <hr>
+                <div class="entry-meta">
+                  <ul class="list-inline">
+                    <li>
+                      <span class="the-author">
+                        <a href="#">Admin</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-time">
+                        <a href="#">06 Jan 2015</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-share">
+                        <a href="#" title="share">30</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-comments">
+                        <a href="#" title="">05</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .entry-meta -->
+              </header><!-- .entry-header -->
+            </article>
+          </div><!-- /.col-sm-4 -->
+          <div class="col-sm-4">
+            <article class="blog-post-wrapper">
+              <div class="figure">    
+                <div class="post-thumbnail">
+                  <a href="#"><img src="assets/images/blog/03.jpg" class="img-responsive " alt=""></a>
+                </div>
+                  <i class="fa fa-quote-left"></i>
+              </div><!-- /.figure -->
+              <header class="entry-header">
+                <div class="post-meta">
+                  <span class="the-category"> 
+                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                  </span>
+                </div>
+                <h2 class="entry-title"><a href="#" rel="">How to create a print ready brochure using photoshop</a></h2>
+                <hr>
+                <div class="entry-meta">
+                  <ul class="list-inline">
+                    <li>
+                      <span class="the-author">
+                        <a href="#">Admin</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-time">
+                        <a href="#">06 Jan 2015</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-share">
+                        <a href="#" title="share">30</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-comments">
+                        <a href="#" title="">05</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .entry-meta -->
+              </header><!-- .entry-header -->
+            </article>
+          </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+        <div class="blog-more text-center">
+          <a href="#" class="btn btn-primary">View More</a>
+        </div>
+        
+      </div><!-- /.container -->
+    </section><!-- End Blog Section -->
+
+
+    <!-- Hire Section -->
+    <section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="hire-section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>I'm available for freelance project</h2>
+              <a href="#" class="btn btn-default">Get Hired</a>
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.hire-section-bg -->
+    </section><!-- End Hire Section -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Get in touch</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-form">
+              <strong>Send me a message</strong>
+              <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
+
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" class="form-control" id="subject">
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
+                </div>
+
+                <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div><!-- /.contact-form -->
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="row center-xs">
+              <div class="col-sm-6">
+                <i class="fa fa-map-marker"></i>
+                <address>
+                  <strong>Address/Street</strong>
+                  239/2 Awesome Street,<br>
+                  Boston, USA<br>
+                </address>
+              </div>
+
+              <div class="col-sm-6">
+                <i class="fa fa-mobile"></i>
+                <div class="contact-number">
+                  <strong>Phone Number</strong>
+                  (001) 0123 111222<br>
+                  (001) 0123 333444
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="location-map">
+                <div id="mapCanvas" class="map-canvas"></div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- End Contact Section -->
+
+
+	<!-- Footer Section -->
+    <footer class="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright text-center">
+              <p>&copy; TrendyTheme 2015. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!-- End Footer Section -->
+
+
+	<!-- Scroll-up -->
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
 	</div>
-</div>
 
-<div id="googleMap" style="height:400px;width:100%;"></div>
-
-<!-- Add Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZDI6TN-SbTbvVESUfhflVYBHaMBAqVgk"></script>
-<!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
-<script>
-var myCenter = new google.maps.LatLng(42.3601, -71.0589);
-
-function initialize() {
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-	<span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>&copy 2016 Kevin Cupak</p>
-  <p>Bootstrap Theme Modified From <a href="http://www.w3schools.com" title="Visit w3schools" target="_blank">www.w3schools.com</a></p>		
-</footer>
-
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-	// Prevent default anchor click behavior
-	event.preventDefault();
-
-	// Store hash
-	var hash = this.hash;
-
-	// Using jQuery's animate() method to add smooth page scroll
-	// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-	$('html, body').animate({
-	  scrollTop: $(hash).offset().top
-	}, 900, function(){
-   
-	  // Add hash (#) to URL when done scrolling (default click behavior)
-	  window.location.hash = hash;
-	});
-  });
-  
-  $(window).scroll(function() {
-	$(".slideanim").each(function(){
-	  var pos = $(this).offset().top;
-
-	  var winTop = $(window).scrollTop();
-		if (pos < winTop + 600) {
-		  $(this).addClass("slide");
-		}
-	});
-  });
-})
-</script>
-
+	<!-- Javascript files -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.countTo.js"></script>
+  <script src="assets/js/jquery.inview.min.js"></script> 
+  <script src="assets/js/jquery.easypiechart.js"></script>
+  <script src="assets/js/jquery.shuffle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!--<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>-->
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
